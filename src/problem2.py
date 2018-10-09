@@ -109,8 +109,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2a()
+    run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -195,8 +195,9 @@ def problem2a(triangle):
       :type triangle: Triangle
       :rtype: Triangle
     """
+    return Triangle(triangle.a * 2, triangle.b * 2, triangle.c * 2)
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -353,8 +354,12 @@ def problem2b(triangles):
       :type triangles: list | tuple of Triangle
       :rtype: int | float
     """
+    area = 0
+    for k in range(len(triangles)):
+        area = area + triangles[k].get_area()
+    return area
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------
