@@ -595,11 +595,7 @@ def problem1c(strings):
       :type strings: list of str
       :rtype: bool
     """
-    count = 0
-    for k in range(len(strings)):
-        if is_prime(len(strings[k])) is True:
-            count = count + 1
-    if is_prime(count) is True:
+    if is_prime(problem1b(strings)) is True:
         return True
     else:
         return False
